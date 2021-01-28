@@ -9,7 +9,6 @@ export function IndicatorTable() {
     const [pageSize, setPageSize] = useState(10);
     const [page, setPage] = useState(1);
 
-
     const query = {
         indicatorData: {
             resource: 'indicators',
@@ -53,11 +52,11 @@ export function IndicatorTable() {
                                             {
                                                 data.indicatorData.indicators?.map((indicator, i) => (
                                                     <TableRow key={`indicator-${i}`}>
-                                                        <TableCell key={`indicator-name-${i}`} >
+                                                        <TableCell key={`indicator-name-${i}`}>
                                                             {indicator.displayName}
                                                         </TableCell>
-                                                        <TableCell key={`indicator-created-${i}`} >
-                                                            {Date(indicator.created).toLocaleString('en-GB')}
+                                                        <TableCell key={`indicator-created-${i}`}>
+                                                            {Date(indicator.created).toLocaleString()}
                                                         </TableCell>
                                                         <TableCell key={`indicator-description-${i}`}>
                                                             {indicator.description}
